@@ -1,0 +1,1 @@
+un sitio web en línea de venta de ropa. El propósito de esta página web es ofrecer una plataforma fácil de usar para que los consumidores puedan ver y comprar ropa de diferentes estilos y diseños.
