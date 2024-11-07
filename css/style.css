@@ -30,11 +30,13 @@ body {
 .sidebar{
     grid-area: sidebar ;
     background-color:  #14216d ;
+    height:auto;
 }
 
 .main{
     grid-area: main;
     background-color: #89d1f3 ;
+    height:auto;
 }
 
 .footer{
@@ -53,11 +55,10 @@ body {
     display: grid;
     gap: 10px;
     grid-template:
-    "header"  100px
-    "navbar"  50px
-    "main"    auto
-    "sidebar" 100px
-    "footer"  100px;
+    "header header"
+    "navbar navbar"
+    "sidebar main"
+    "footer footer";
 }
 
 
@@ -72,19 +73,22 @@ body {
         "sidebar  main"
         "footer  footer" 
         ;*/
+        grid-template-columns: 200px auto;
         grid-template:
-        "header  header" 100px
-        "navbar  navbar" 50px
-        "sidebar  main"  auto
-        "footer  footer" 100px/ 200px auto;
+        "header  header"
+        "navbar  navbar"
+        "sidebar  main"
+        "footer  footer";
     }
 }
 
 @media (min-width: 900px) {
     .grid-container{
+        grid-template-columns: 200px auto;
         grid-template:
-        "header  header  header" 100px
-        "navbar  main    sidebar" auto
-        "footer  footer  footer" 100px/ 200px auto 200px;
+        "header  header  header"
+        "navbar  navbar  navbar"
+        "sidebar main    main"
+        "footer footer footer";
     }
 }

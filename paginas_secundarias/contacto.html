@@ -1,0 +1,38 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <h1>Chiori's Tienda</h1>
+    </header>
+    <main>
+        <section id="contacto" class="contact-section">
+            <h2>Contacto</h2>
+            <form action="https://formspree.io/f/mldebldg" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Chiori's Tienda. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
