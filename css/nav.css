@@ -1,0 +1,19 @@
+/* Navegacion */
+.navbar a{
+    color:white;
+    text-decoration: none;
+    padding: 10px 30px;
+    transition: box-shadow 0.3s;
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color:#14216d;
+
+}
+
+.navbar a:hover{
+    background-color:#14216d ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
+    color: #ffffff;
+}

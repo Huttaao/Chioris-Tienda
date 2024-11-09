@@ -1,0 +1,25 @@
+
+.footer{
+    grid-area: footer;
+    background-color:  #000000  ;
+}
+
+.footer_contenido { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    margin-bottom: 20px;
+}
+
+.footer_seccion a, .links_redes_sociales { 
+    color: #ffffff; 
+    text-decoration: none; 
+    display: block; 
+    margin: 5px 10px;
+    display: flex;
+}
+
+.footer_seccion svg{
+    margin: 2px;
+}
