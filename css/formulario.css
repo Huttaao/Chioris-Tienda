@@ -1,0 +1,175 @@
+@import url(/css/footer.css);
+@import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Overlock", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100%;
+}
+
+.grid-container > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75) ;
+    border-radius: 0px;
+    padding: 10px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    gap: 0px;
+    grid-template:
+    "header"
+    "navbar" 
+    "main  "
+    "footer"
+    
+}
+
+
+@media (min-width: 600px) {
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template:
+        "header"
+        "navbar"
+        "main  "
+        "footer"
+    }
+}
+
+@media (max-width:900px) {
+    .producto{
+        flex: 1 1 45%; /* Cada producto ocupa el ancho completo en vertical */ 
+        max-width: 45%;
+    }
+}
+
+
+@media (max-width:600px) {
+    .producto{
+        flex: 1 1 100%; /* Cada producto ocupa el ancho completo en vertical */ 
+        max-width: 90%;
+    }
+}
+
+
+@media (min-width: 900px) {
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template:
+        "header"
+        "navbar"
+        "main  "
+        "footer";
+    }
+
+}
+
+/* Header */
+.logo img{
+    height: 100px;
+}
+
+.icon_contenedor{
+    position: absolute;
+    right: 20px;
+    top: 75%;
+    color: rgb(255, 255, 255);
+}
+
+.header {
+    grid-area: header ;
+    background-color:rgb(0, 0, 0);
+    color:  #18657c;
+    position: relative;
+}
+
+
+/* Navegacion */
+.navbar a{
+    color:white;
+    text-decoration: none;
+    padding: 10px 30px;
+    transition: box-shadow 0.3s;
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color:#14216d;
+
+}
+
+.navbar a:hover{
+    background-color:#14216d ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
+    color: #ffffff;
+}
+
+/* FORMULARIO  */
+/* Estilo general del formulario */ 
+.contact-section { background-color: #ffffff; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.contact-section h2 { margin-bottom: 20px; 
+     color: #14216d; 
+     text-align: center;
+}
+
+/* Estilo para los grupos del formulario */ 
+.form-group { 
+    margin-bottom: 15px; 
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 5px; 
+    color: #333;
+}
+
+.form-group input, .form-group textarea { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+}
+
+/*apariencia del botón de envío */ 
+.contact-section button[type="submit"] {
+    background-color: #14216d; 
+    color: #fff; border: none; 
+    padding: 10px 20px; border-radius: 
+    5px; cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+.contact-section button[type="submit"]:hover { 
+    background-color: #0f1a53; 
+}
+
+.form-group textarea { 
+    height: 150px; 
+}
+
+/* Resaltar bordes de los campos del formulario al enfocarse */ 
+.form-group input:focus, .form-group textarea:focus { 
+    border-color: #14216d; 
+    outline: none; 
+    box-shadow: 0 0 5px rgba(20, 33, 109, 0.2); 
+}

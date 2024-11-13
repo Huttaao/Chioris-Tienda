@@ -1,0 +1,23 @@
+/* Header */
+.logo img{
+    height: 100px;
+}
+
+.icon_contenedor{
+    position: absolute;
+    right: 20px;
+    top: 75%;
+    color: rgb(255, 255, 255);
+}
+
+.icon_carrito{
+    width: 35px;
+    height: 40px;
+}
+
+.header {
+    grid-area: header ;
+    background-color:rgb(0, 0, 0);
+    color:  #18657c;
+    position: relative;
+}
