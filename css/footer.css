@@ -1,29 +1,17 @@
-
-.footer{
-    grid-area: footer;
-    background-color:  #000000  ;
+.noMargen {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        background-color: #263f9a  ;
+        padding: 1rem 0 !important;
+        border: none !important;
 }
 
-.footer_contenido { 
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: center; 
-    margin-bottom: 20px;
+footer svg {
+    fill: #d6e8f5 ;
+    width: 50px;
+    height: 20px;
 }
 
-.footer_seccion a, .links_redes_sociales { 
-    color: #ffffff; 
-    text-decoration: none; 
-    display: block; 
-    margin: 5px 10px;
-    display: flex;
-}
-
-.footer_seccion svg{
-    margin: 2px;
-}
-
-.footer_seccion h3{
-    color:#ffffff
+.colorTexto{
+    color:#d6e8f5 !important;
 }

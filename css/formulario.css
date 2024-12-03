@@ -1,8 +1,11 @@
-@import url(/css/footer.css);
 @import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 @import url(/Bootstrap/css/bootstrap.css);
 @import url(/Bootstrap/css/bootstrap.min.css);
 @import url(/css/nav.css);
+@import url(/css/footer.css);
+@import url(/css/main.css);
+@import url(/css/header.css);
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -78,24 +81,6 @@ body {
 
 }
 
-/* Header */
-.logo img{
-    height: 100px;
-}
-
-.icon_contenedor{
-    position: absolute;
-    right: 20px;
-    top: 75%;
-    color: rgb(255, 255, 255);
-}
-
-.header {
-    grid-area: header ;
-    background-color:rgb(0, 0, 0);
-    color:  #18657c;
-    position: relative;
-}
 
 
 /* FORMULARIO  */
