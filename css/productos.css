@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url(/Bootstrap/css/bootstrap.css);
+@import url(/Bootstrap/css/bootstrap.min.css);
+@import url(/css/nav.css);
 @import url(/css/footer.css);
 
 
@@ -22,7 +25,7 @@ body {
 .grid-container > * {
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75) ;
     border-radius: 0px;
-    padding: 10px;
+    padding: 0px;
     text-align: center;
 }
 
@@ -90,26 +93,6 @@ body {
 }
 
 /* Navegacion */
-.navbar a{
-    color:white;
-    text-decoration: none;
-    padding: 10px 30px;
-    transition: box-shadow 0.3s;
-}
-
-.navbar{
-    grid-area: navbar;
-    background-color:#14216d;
-
-}
-
-.navbar a:hover{
-    background-color:#14216d ;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
-    color: #ffffff;
-}
-
-
 
 
 /* PRODUCTOS */
