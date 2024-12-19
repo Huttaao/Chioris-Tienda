@@ -3,6 +3,7 @@
 @import url(/Bootstrap/css/bootstrap.css);
 @import url(/Bootstrap/css/bootstrap.min.css);
 @import url(/css/nav.css);
+@import url(/css/header.css);
 * {
     box-sizing: border-box;
     margin: 0;

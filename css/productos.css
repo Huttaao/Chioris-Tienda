@@ -5,6 +5,132 @@
 @import url(/css/footer.css);
 
 
+/* Header */
+.logo img{
+    height: 100px;
+}
+
+/* Estilo para organizar los elementos del carrito */ 
+.item-carrito { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+/* Estilo específico para el botón "Cerrar" */ 
+
+#encabezado-carrito { 
+    text-align: center; 
+    margin-bottom: 20px; /* Ajusta el espacio entre el botón y los productos */ 
+}
+
+#contenedor-carrito { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px 30px;
+}
+
+#contenedor-carrito button{
+    padding: 5px 10px; 
+    font-size: 12px;
+    margin: 10px;
+}
+
+
+
+#boton-cerrar { 
+    display: block; 
+    margin-bottom: 10px; 
+    background-color: #dc3545; 
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 12px; 
+    float: right; 
+}
+
+.close-button:hover { 
+    background-color: #c82333; 
+}
+
+.icon_contenedor{
+    position: absolute;
+    right: 20px;
+    top: 75%;
+    color: rgb(255, 255, 255);
+}
+
+.icon_carrito{
+    width: 35px;
+    height: 40px;
+}
+
+.header {
+    grid-area: header ;
+    background-color:rgb(0, 0, 0);
+    color:  #18657c;
+    position: relative;
+}
+
+.carrito { 
+    border: 1px solid #ddd; 
+    border-radius: 0px; 
+    padding: 20px; 
+    margin-top: 20px; 
+    display: none; /* Ocultar por defecto */ 
+    position: absolute; 
+    right: 20px; 
+    top: 60px; 
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    max-height: 60vh; /* Limitar la altura máxima */ 
+    overflow-y: auto; /* Permitir el desplazamiento vertical si el contenido es demasiado alto */
+} 
+
+.carrito h2 { 
+    margin-bottom: 10px; 
+} 
+
+.carrito button { 
+    background-color: #14216d; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+} 
+
+.carrito button:hover { 
+    background-color: #90a1d4; 
+} 
+
+.carrito #total { 
+    margin-top: 10px; 
+    font-weight: bold; 
+}
+
+/* Estilo para el mensaje de carrito */
+.mensaje-carrito {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -108,7 +234,7 @@ body {
 .seccion_destacados{
     display: flex; /* Flexbox para alinear horizontalmente */
      flex-wrap: wrap; /* Permite que los elementos se envuelvan */ 
-     gap: 20px; /* Espacio entre los productos */ 
+     gap: 50px; /* Espacio entre los productos */ 
      justify-content: center; /* Centra los productos horizontalmente */
 }
 
@@ -126,6 +252,7 @@ body {
      padding: 20px; /* Espacio interno */ 
     transition: transform 0.3s ease, 
      box-shadow 0.3s ease; /* Transiciones */
+    max-width: 300px;
 } 
 
 .producto:hover{
@@ -167,4 +294,5 @@ body {
     font-size: 1.1em; 
     color: #333;
 }
+
 

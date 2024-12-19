@@ -1,15 +1,17 @@
 
 .footer{
     grid-area: footer;
-    background-color:  #000000  ;
+    background-color:  #242323  ;
 }
 
 .footer_contenido { 
     display: flex; 
     flex-wrap: wrap; 
     gap: 20px; 
-    justify-content: center; 
     margin-bottom: 20px;
+    color: #ffffff;
+    padding: 10px;
+    justify-content: center;
 }
 
 .footer_seccion a, .links_redes_sociales { 
@@ -18,12 +20,10 @@
     display: block; 
     margin: 5px 10px;
     display: flex;
+
 }
 
 .footer_seccion svg{
     margin: 2px;
 }
 
-.footer_seccion h3{
-    color:#ffffff
-}

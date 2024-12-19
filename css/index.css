@@ -14,69 +14,33 @@
 
 html, body {
     height: 100%;
+    width: 100%;
+    overflow-x: hidden !important; /* Evitar desbordamiento horizontal */
 }
 
 body {
     font-family: "Overlock", sans-serif;
     font-weight: 400;
     font-style: normal;
-    min-height: 100%;
-}
-
-.grid-container > * {
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75) ;
-    border-radius: 0px;
-    padding: 0px;
-    text-align: center;
+    overflow-x: hidden !important;
 }
 
 .grid-container {
     display: grid;
     gap: 0px;
-    grid-template:
-    "header"
-    "navbar" 
-    "main  "
-    "footer"
-    
-}
-
-
-@media (min-width: 600px) {
-    .grid-container{
-        grid-template-columns: 1fr;
-        grid-template:
+    grid-template-areas: 
         "header"
         "navbar"
-        "main  "
-        "footer"
-    }
-}
-
-@media (max-width:900px) {
-    .producto{
-        flex: 1 1 45%; /* Cada producto ocupa el ancho completo en vertical */ 
-        max-width: 45%;
-    }
-}
-
-
-@media (max-width:600px) {
-    .producto{
-        flex: 1 1 100%; /* Cada producto ocupa el ancho completo en vertical */ 
-        max-width: 90%;
-    }
-}
-
-
-@media (min-width: 900px) {
-    .grid-container{
-        grid-template-columns: 1fr;
-        grid-template:
-        "header"
-        "navbar"
-        "main  "
+        "main"
         "footer";
-    }
-
+    max-width: 100% !important; /* Asegura que no exceda el ancho de la pantalla */
+    overflow-x: hidden !important;
 }
+
+.grid-container > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
