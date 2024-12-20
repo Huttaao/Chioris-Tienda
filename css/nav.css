@@ -1,45 +1,101 @@
-
-.custom-navbar {
-    background-color: rgb(0, 0, 0);
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.custom-brand {
-    background-color: rgb(0, 0, 0);
-    display: flex; 
-    align-items: center;
+/* Navbar Styles */
+.navbar {
+    background-color: #000000; /* Ajusta según tu preferencia */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.custom-brand:hover,
-.custom-brand:focus {
-    color:   #59a2ac ;
+.navbar-brand:hover { 
+    color: #59a2ac; /* Color original */
+}
+
+/* Estilo por defecto para ocultar el botón de toggle */ 
+.toggle-button { 
+    display: none; 
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1,1rem;
+    font-weight: bold;
     text-decoration: none;
+    color: #59a2ac;
 }
 
-
-.custom-logo {
+.logo {
     margin-right: 10px;
 }
 
-.custom-menu {
-    background-color: rgb(0, 0, 0);
-    display: flex; 
-    flex-direction: row; 
-    gap: 95px;
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row; /* Mantener horizontal en pantallas grandes */
 }
 
-.custom-navbar, .custom-logo, .custom-menu .nav-item .nav-link {
-    color: white;
+.nav-item {
+    margin-left: 20px;
 }
 
-.custom-brand{
-    color:   #59a2ac ;
-    ;
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
 }
 
-.custom-menu .nav-link:hover {
-    color: rgb(209, 201, 201);
+.nav-link:hover,
+.nav-link.active {
+    color: #b1b0b0;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .navbar-brand {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5em; /* Tamaño del icono */ 
+        color: #cccccc; 
+        margin-right: auto; /* Mueve el botón a la izquierda */
+    }
 }
 

@@ -96,11 +96,31 @@ function agregarAlCarrito(id) {
     // Mostrar mensaje de agregado al carrito 
     const mensaje = document.createElement('div'); 
     mensaje.classList.add('mensaje-carrito'); 
-    mensaje.textContent = `${producto.name} ha sido añadido al carrito.`; 
+
+    // Añadir icono SVG
+    const icono = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    icono.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    icono.setAttribute('width', '16');
+    icono.setAttribute('height', '16');
+    icono.setAttribute('fill', 'currentColor');
+    icono.setAttribute('class', 'bi bi-check-circle');
+    icono.setAttribute('viewBox', '0 0 16 16');
+    icono.innerHTML = `
+        <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm3.468-8.284-4.39 4.392-1.939-1.94.708-.707 1.231 1.232 3.682-3.683.708.707z"/>
+    `;
+
+    mensaje.appendChild(icono);
+
+    const texto = document.createElement('span');
+    texto.textContent = `${producto.name} ha sido añadido al carrito.`;
+    mensaje.appendChild(texto);
+
     document.body.appendChild(mensaje); 
-    setTimeout(() => { mensaje.remove();
-    }, 2000);
+    setTimeout(() => { 
+        mensaje.remove();
+    }, 2500);
 }
+
 
 // Función para mostrar los elementos del carrito 
 function mostrarCarrito() { 
@@ -158,6 +178,55 @@ function toggleCarrito() {
         carritoElement.style.display = 'none'; 
     } 
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.createElement('button');
+    toggleButton.classList.add('toggle-button');
+    toggleButton.innerHTML = '&#9776;'; // Icono de menú
+    document.querySelector('.container').prepend(toggleButton);
+
+    toggleButton.addEventListener('click', function() {
+        const navbarMenu = document.getElementById('navbarMenu');
+        navbarMenu.classList.toggle('active');
+    });
+});
+
+// Función para finalizar la compra 
+function finalizePurchase() { 
+    vaciarCarrito(); // Vaciar el carrito
+
+    const mensaje = document.createElement('div'); 
+    mensaje.classList.add('mensaje-carrito'); 
+
+    const icono = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    icono.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    icono.setAttribute('width', '16');
+    icono.setAttribute('height', '16');
+    icono.setAttribute('fill', 'currentColor');
+    icono.setAttribute('class', 'bi bi-check-circle');
+    icono.setAttribute('viewBox', '0 0 16 16');
+    icono.innerHTML = `
+        <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm3.468-8.284-4.39 4.392-1.939-1.94.708-.707 1.231 1.232 3.682-3.683.708.707z"/>
+    `;
+
+    mensaje.appendChild(icono);
+
+
+    const texto = document.createElement('span');
+    texto.textContent = 'La compra se ha finalizado con éxito.';
+    mensaje.appendChild(texto);
+
+
+    document.body.appendChild(mensaje); 
+
+
+    setTimeout(() => { 
+        mensaje.remove();
+    }, 2500);
+}
+
+
+
 
 // Llamar a la función para generar y mostrar los productos
 generarProductos();

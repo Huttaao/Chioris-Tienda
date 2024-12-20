@@ -117,18 +117,45 @@
 /* Estilo para el mensaje de carrito */
 .mensaje-carrito {
     position: fixed;
-    bottom: 20px;
-    left: 50%;
+    bottom: 20px !important;
+    left: 50% !important;
     transform: translateX(-50%);
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    background-color: #343a40; /* Color de fondo ajustado */
+    color: #ffffff; /* Color del texto */
+    padding: 15px 25px !important; /* Espaciado ajustado */
+    border-radius: 10px !important; /* Bordes más redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 1000 !important;
+    display: flex;
+    align-items: center !important;
+    animation: fadeInOut 2.5s forwards;
+    font-family: 'Roboto', sans-serif !important; /* Fuente ajustada */
 }
 
+.mensaje-carrito svg {
+    margin-right: 15px !important;
+    color: #28a745; /* Color del icono ajustado */
+}
 
+/* Animación de desvanecimiento */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) translateX(-50%);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px) translateX(-50%);
+    }
+}
 
 
 * {
